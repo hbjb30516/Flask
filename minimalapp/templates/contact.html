@@ -10,24 +10,28 @@
 <body>
     <h2>문의 폼</h2>
 
-    <form action="{{ url_for('contact_complete') }}" method="POST" novalidate="novalidate">
+    <form action="{{ url_for('contact_complete') }}" method="POST">
         <table>
             <tr>
                 <td>사용자명</td>
                 <td>
-                    <input type="text" name="username" value="{{ username }}" placeholder="사용자명" />
+                    <input type="text" name="username" 
+                           value="{% if username %}{{ username }}{% endif %}" 
+                           placeholder="사용자명" required />
                 </td>
             </tr>
             <tr>
                 <td>메일 주소</td>
                 <td>
-                    <input type="text" name="email" value="{{ email }}" placeholder="메일 주소" />
+                    <input type="email" name="email" 
+                           value="{% if email %}{{ email }}{% endif %}" 
+                           placeholder="메일 주소" required />
                 </td>
             </tr>
             <tr>
                 <td>문의 내용</td>
                 <td>
-                    <textarea name="description" placeholder="문의 내용">{{ description }}</textarea>
+                    <textarea name="description" placeholder="문의 내용" required>{% if description %}{{ description }}{% endif %}</textarea>
                 </td>
             </tr>
         </table>
