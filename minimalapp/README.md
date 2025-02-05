@@ -5,11 +5,28 @@
 
 ## 문의 폼 스크린샷
 
-<div style="display: flex; justify-content: space-around;">
-  <img src="images/contact_form.png" width="300">
-  <img src="images/contact_form2.png" width="300">
-  <img src="images/contact_form3.png" width="300">
-</div>
+## 📷 문의 폼 스크린샷
+
+<table>
+  <tr>
+    <td align="center">
+      <img src="images/contact_form.png" width="300">
+      <br>
+      <b>📌 문의 폼 입력 화면</b>
+    </td>
+    <td align="center">
+      <img src="images/contact_form2.png" width="300">
+      <br>
+      <b>📩 문의 완료 화면</b>
+    </td>
+    <td align="center">
+      <img src="images/contact_form3.png" width="300">
+      <br>
+      <b>📧 이메일 전송 결과</b>
+    </td>
+  </tr>
+</table>
+
 ---
 
 ## 🚀 기능 (Features)
