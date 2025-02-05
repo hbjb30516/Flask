@@ -4,7 +4,9 @@
 사용자가 **문의 내용을 작성하고 제출하면** Flask-Mail을 통해 **자동으로 이메일이 발송**됩니다.
 
 ![문의 폼 스크린샷](images/contact_form.png)  
+
 ![폼 스크린샷2](images/contact_form2.png)
+
 ![gmail](images/contact_form3.png)
 
 ---
