@@ -17,11 +17,6 @@
 
 ---
 
-## 📂 폴더 구조 (Project Structure)
-/flask-contact-app │── app.py # Flask 애플리케이션 실행 파일 │── requirements.txt # 프로젝트 종속성 (패키지 목록) │── .env # 환경 변수 설정 파일 (비공개) │── /templates # HTML 템플릿 폴더 │ ├── contact.html # 문의 폼 페이지 │ ├── contact_complete.html # 문의 완료 페이지 │ ├── /email │ ├── contact_complete.txt # 이메일 텍스트 템플릿 │ ├── contact_complete.html # 이메일 HTML 템플릿 │── /static # 정적 파일 (CSS, JS 등) │ ├── style.css # 스타일시트 │── /images # 프로젝트 이미지 (스크린샷)
-
----
-
 ## 🔧 설치 및 실행 방법 (Installation & Usage)
 
 ### 1️⃣ 프로젝트 클론
@@ -55,3 +50,20 @@ MAIL_DEFAULT_SENDER=your_email@gmail.com
 ```
 #### 보안 주의: .env 파일은 절대 GitHub 등에 업로드하지 마세요!
 #### .gitignore에 추가하는 것이 안전합니다.
+
+---
+
+## ⚠️ 자주 발생하는 오류 및 해결 방법
+### ❌ 이메일이 전송되지 않아요!
+1. Gmail SMTP 보안 설정 확인
+- Gmail을 사용할 경우, 앱 비밀번호(App Password)를 생성하여 MAIL_PASSWORD에 사용하세요.
+    또는 보안 수준이 낮은 앱 액세스 허용을 설정해야 할 수도 있습니다.
+
+2. 환경 변수 확인
+
+- .env 파일이 올바르게 설정되었는지 확인하세요.
+- MAIL_USERNAME과 MAIL_PASSWORD가 올바르게 입력되었는지 확인하세요.
+
+3. 방화벽 또는 네트워크 문제 확인
+
+- SMTP 포트(587 또는 465)가 방화벽에 의해 차단되지 않았는지 확인하세요.

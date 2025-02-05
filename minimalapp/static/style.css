@@ -1,10 +1,68 @@
+/* 기본 스타일 */
 body {
-    background-color: #ffff00;
+    background-color: #fff9c4; /* 연한 노란색 */
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
 }
+
+/* 컨테이너 스타일 (가운데 정렬, 내용 왼쪽 정렬) */
+.container {
+    max-width: 600px; /* 넓은 화면에서도 적절한 크기로 유지 */
+    margin: auto;
+    padding: 20px;
+    text-align: left; /* 모든 내부 요소 왼쪽 정렬 */
+}
+
+/* 제목과 문단 스타일 */
 h1 {
-   margin-top: 40px;
+    font-size: 2rem;
+    margin-top: 20px;
 }
 
+p {
+    font-size: 1.2rem;
+    margin-top: 15px;
+    line-height: 1.5;
+}
 
+/* 버튼 스타일 (왼쪽 정렬) */
+button {
+    background-color: #ffcc00;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-top: 20px;
+    border-radius: 5px;
+    display: block; /* 블록 요소로 만들어 왼쪽 정렬 */
+    text-align: left;
+}
 
+button:hover {
+    background-color: #ffbb00;
+}
 
+/* 반응형 디자인 - 작은 화면 (모바일) */
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+
+    .container {
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    p {
+        font-size: 1rem;
+    }
+
+    button {
+        font-size: 0.9rem;
+        padding: 8px 16px;
+    }
+}
