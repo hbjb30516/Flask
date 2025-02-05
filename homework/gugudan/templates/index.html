@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>구구단 출력</title>
+</head>
+<body>
+    <h1>구구단을 외자</h1>
+    <p>출력하고자 하는 구구단을 입력하세요.</p>
+
+    <form method="POST">
+        <input type="text" name="dan" placeholder="구구단 입력">
+        <button type="submit">구구단 확인하기</button>
+    </form>
+
+    {% if result is not none %}
+        <hr>
+        {% if result in ["아직 아무 숫자도 입력이 안되었습니다.", "문자가 입력되었습니다. 숫자를 입력해주세요."] %}
+            <p style="font-weight: bold;">{{ result }}</p>
+        {% else %}
+            {% for row in result %}
+                <p>{{ row }}</p>
+            {% endfor %}
+        {% endif %}
+    {% endif %}
+</body>
+</html>
